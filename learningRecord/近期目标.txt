@@ -1,1 +1,2 @@
 1.掌握docker和k8s
+2.掌握微服务概念，学习好springboot和springcloud，对springboot原理有深入研究
