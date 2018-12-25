@@ -59,7 +59,12 @@ The source of the existing CacheManager is: InputStreamConfigurationSource [stre
     因为在使用maven install时，会先运行测试代码，再运行正式代码，这过程spring boot启动了两次，所以会重复创建了cacheManager
  
  解决办法：
-    maven install时跳过测试，可以使用以下插件跳过：
+    maven install时跳过测试。
+    
+    1.命令方式：
+    mvn install -Dmaven.test.skip = true
+    
+    2.配置文件方式
       <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
